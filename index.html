@@ -3,21 +3,147 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>老熊的工作台</title>
+<title>老熊 | Laoxiong</title>
+<meta name="description" content="一個業務老手的觀察筆記——做業務、看趨勢、寫東西。">
 <style>
-body{font-family:-apple-system,"Noto Sans TC",sans-serif;background:#111;color:#eee;max-width:720px;margin:0 auto;padding:48px 24px;line-height:1.7}
-h1{font-size:1.6rem;margin-bottom:8px}
-p.sub{color:#888;margin-bottom:32px}
-.card{background:#1a1a1a;border:1px solid #262626;border-radius:12px;padding:20px;margin-bottom:14px}
-.card h2{font-size:1.05rem;margin:0 0 6px}
-.card p{color:#999;font-size:.9rem;margin:0}
+  :root{
+    --bg:#0d0f12;
+    --card:#16191d;
+    --card-hover:#1d2126;
+    --line:#242830;
+    --txt:#e8eaed;
+    --txt-dim:#9aa0a6;
+    --accent:#c9a227;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+    background:var(--bg);
+    color:var(--txt);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    padding:48px 20px 64px;
+    line-height:1.7;
+    background-image:radial-gradient(circle at 50% 0%,rgba(201,162,39,.07),transparent 55%);
+  }
+  .wrap{width:100%;max-width:480px}
+
+  /* 頭像區 */
+  .head{text-align:center;margin-bottom:36px}
+  .avatar{
+    width:96px;height:96px;margin:0 auto 20px;
+    border-radius:50%;
+    background:linear-gradient(145deg,#1f2429,#141719);
+    border:1px solid var(--line);
+    display:flex;align-items:center;justify-content:center;
+    font-size:44px;
+    box-shadow:0 8px 28px rgba(0,0,0,.45);
+  }
+  h1{font-size:1.5rem;font-weight:700;letter-spacing:.04em;margin-bottom:8px}
+  .tagline{color:var(--txt-dim);font-size:.95rem;letter-spacing:.02em}
+  .sub{margin-top:14px;font-size:.85rem;color:#6b7076;letter-spacing:.06em}
+
+  /* 卡片 */
+  .cards{display:flex;flex-direction:column;gap:12px;margin-top:8px}
+  a.card{
+    display:flex;align-items:center;gap:16px;
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:18px 20px;
+    text-decoration:none;color:inherit;
+    transition:background .18s ease,border-color .18s ease,transform .18s ease;
+  }
+  a.card:hover,a.card:active{
+    background:var(--card-hover);
+    border-color:#33383f;
+    transform:translateY(-1px);
+  }
+  .ico{
+    flex:0 0 42px;height:42px;border-radius:11px;
+    background:#1e2227;
+    display:flex;align-items:center;justify-content:center;
+    font-size:20px;
+  }
+  .txt{flex:1;min-width:0}
+  .txt .t{font-size:1rem;font-weight:600;letter-spacing:.01em}
+  .txt .d{font-size:.83rem;color:var(--txt-dim);margin-top:2px}
+  .arrow{color:#4a5058;font-size:1.1rem;flex:0 0 auto}
+
+  /* 未開放的卡片 */
+  .card.soon{
+    display:flex;align-items:center;gap:16px;
+    background:#121518;border:1px dashed #242a31;border-radius:14px;padding:18px 20px;opacity:.75;
+  }
+  .card.soon .t{font-size:1rem;font-weight:600;color:#b0b5ba}
+  .card.soon .d{font-size:.83rem;color:#6b7076;margin-top:2px}
+  .badge{
+    font-size:.68rem;padding:3px 8px;border-radius:6px;
+    background:rgba(201,162,39,.13);color:var(--accent);
+    border:1px solid rgba(201,162,39,.25);letter-spacing:.06em;
+  }
+
+  footer{
+    margin-top:40px;text-align:center;
+    font-size:.76rem;color:#565b61;letter-spacing:.05em;
+  }
 </style>
 </head>
 <body>
-<h1>老熊的工作台</h1>
-<p class="sub">Hermes 協作空間 — 建立於 2026-09-10</p>
-<div class="card"><h2>📚 知識庫</h2><p>筆記、口播稿、專案資料</p></div>
-<div class="card"><h2>📖 我的書</h2><p>《我只做只有我能做的事》</p></div>
-<div class="card"><h2>🎤 口播</h2><p>練習法與素材庫</p></div>
+<div class="wrap">
+
+  <div class="head">
+    <div class="avatar">🐻</div>
+    <h1>老 熊</h1>
+    <p class="tagline">一個業務老手的觀察筆記</p>
+    <p class="sub">做業務 · 看趨勢 · 寫東西</p>
+  </div>
+
+  <div class="cards">
+
+    <div class="card soon">
+      <div class="ico">📖</div>
+      <div class="txt">
+        <div class="t">我只做只有我能做的事</div>
+        <div class="d">我的第一本書 · 撰寫中</div>
+      </div>
+      <span class="badge">準備中</span>
+    </div>
+
+    <div class="card soon">
+      <div class="ico">🎤</div>
+      <div class="txt">
+        <div class="t">一隻老熊</div>
+        <div class="d">抖音 · 口播與字卡</div>
+      </div>
+      <span class="badge">準備中</span>
+    </div>
+
+    <div class="card soon">
+      <div class="ico">💭</div>
+      <div class="txt">
+        <div class="t">觀察筆記</div>
+        <div class="d">趨勢、人口、產業的想法</div>
+      </div>
+      <span class="badge">準備中</span>
+    </div>
+
+    <div class="card soon">
+      <div class="ico">✉️</div>
+      <div class="txt">
+        <div class="t">聯絡我</div>
+        <div class="d">想聊點什麼的話</div>
+      </div>
+      <span class="badge">準備中</span>
+    </div>
+
+  </div>
+
+  <footer>
+    老熊 · Laoxiong &nbsp;|&nbsp; <span id="yr"></span>
+  </footer>
+</div>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
 </body>
 </html>
